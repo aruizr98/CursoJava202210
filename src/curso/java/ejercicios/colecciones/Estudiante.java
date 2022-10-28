@@ -2,8 +2,6 @@ package curso.java.ejercicios.colecciones;
 
 import java.util.Set;
 
-import curso.java.colecciones.Asignatura;
-
 public class Estudiante extends Persona{
 	private Set<Asignatura> asignaturas;
 

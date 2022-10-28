@@ -1,12 +1,10 @@
-package curso.java.colecciones;
+package curso.java.ejercicios.colecciones;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
-import curso.java.ejercicios.colecciones.Estudiante;
 
 public class Instituto {
 	private List<Estudiante> estudiantes;
