@@ -75,6 +75,7 @@ public class Instituto {
 		System.out.println();
 	}
 	public void eliminarEstudiantesSuspensos(String asignatura) {
+		boolean suspenso=false;
 		for (Iterator iterator = estudiantes.iterator(); iterator.hasNext();) {
 			Estudiante estudiante = (Estudiante) iterator.next();
 			for (Iterator iterator2 = estudiante.getAsignaturas().iterator(); iterator2.hasNext();) {
@@ -82,8 +83,12 @@ public class Instituto {
 				if(a.getNombre().equals(asignatura) && a.getNota() < 5) {
 					System.out.println("El estudiante "+estudiante.getNombre()+" "+estudiante.getApellidos()+" ha sido eliminado porque ha suspendido "+asignatura+".");
 					iterator.remove();
+					suspenso=true;
 				}
 			}
+		}
+		if(!suspenso) {
+			System.out.println("Todos los estudiantes han aprobado "+asignatura+".");
 		}
 		System.out.println();
 	}
