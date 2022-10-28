@@ -63,6 +63,7 @@ public class Instituto {
 				}
 			}
 		}
+		System.out.println();
 	}
 	public void mostrarAprobados() {
 		System.out.println("Alumnos que han aprobado el curso:");
@@ -73,6 +74,7 @@ public class Instituto {
 				System.out.println(estudiante.getNombre()+" "+estudiante.getApellidos()+". Nota media: "+String.format("%.2f", media));
 			}
 		}
+		System.out.println();
 	}
 	public void eliminarEstudiantesSuspensos(String asignatura) {
 		for (Iterator iterator = estudiantes.iterator(); iterator.hasNext();) {
@@ -80,13 +82,12 @@ public class Instituto {
 			for (Iterator iterator2 = estudiante.getAsignaturas().iterator(); iterator2.hasNext();) {
 				Asignatura a = (Asignatura) iterator2.next();
 				if(a.getNombre().equals(asignatura) && a.getNota() < 5) {
-					System.out.println("El estudiante "+estudiante.getNombre()+" "+estudiante.getApellidos()+" ha sido eliminado.");
+					System.out.println("El estudiante "+estudiante.getNombre()+" "+estudiante.getApellidos()+" ha sido eliminado porque ha suspendido "+asignatura+".");
 					iterator.remove();
 				}
-				
 			}
-			
 		}
+		System.out.println();
 	}
 	public static void main(String[] args) {
 		Instituto instituto = new Instituto();
