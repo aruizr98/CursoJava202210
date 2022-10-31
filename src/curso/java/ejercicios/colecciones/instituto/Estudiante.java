@@ -1,5 +1,6 @@
 package curso.java.ejercicios.colecciones.instituto;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Estudiante extends Persona{
@@ -14,6 +15,15 @@ public class Estudiante extends Persona{
 		super(nombre, apellidos);
 		this.asignaturas = asignaturas;
 	}
+	public Estudiante(String nombre, String apellidos) {
+		super(nombre, apellidos);
+		this.asignaturas=new HashSet<Asignatura>();
+	}
+	public Estudiante(String nombre, String apellidos, String dni) {
+		super(nombre, apellidos, dni);
+		this.asignaturas=new HashSet<Asignatura>();
+	}
+	
 
 	public Set<Asignatura> getAsignaturas() {
 		return asignaturas;
