@@ -3,7 +3,7 @@ package curso.java.funciones;
 import java.util.Scanner;
 
 public class Utils {
-	//C
+	
 	/**
 	 * tira un dado del número de caras introducidas como argumento de entrada.
 	 * @param numCaras
