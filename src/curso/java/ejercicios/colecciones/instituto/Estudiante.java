@@ -1,4 +1,4 @@
-package curso.java.ejercicios.colecciones;
+package curso.java.ejercicios.colecciones.instituto;
 
 import java.util.Set;
 

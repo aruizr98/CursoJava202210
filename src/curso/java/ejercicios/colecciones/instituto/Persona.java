@@ -1,4 +1,5 @@
-package curso.java.ejercicios.colecciones;
+
+package curso.java.ejercicios.colecciones.instituto;
 
 public class Persona {
 	private String nombre;
