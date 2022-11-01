@@ -23,6 +23,12 @@ public class Colegio {
 		this.estudiantes=new ArrayList<Estudiante>();
 	}
 	
+	public List<Estudiante> getEstudiantes() {
+		return estudiantes;
+	}
+	public void setEstudiantes(List<Estudiante> estudiantes) {
+		this.estudiantes = estudiantes;
+	}
 	public String getNombre() {
 		return nombre;
 	}
