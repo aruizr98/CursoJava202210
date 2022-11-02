@@ -8,27 +8,14 @@ import curso.java.ejercicios.colecciones.instituto.Estudiante;
 public class Colegio {
 	private String nombre;
 	private String direccion;
-	private List<Estudiante> estudiantes;
 	
-	public Colegio(String nombre, String direccion, List<Estudiante> estudiantes) {
-		super();
-		this.nombre = nombre;
-		this.direccion = direccion;
-		this.estudiantes=estudiantes;
-	}
 	public Colegio(String nombre, String direccion) {
 		super();
 		this.nombre = nombre;
 		this.direccion = direccion;
-		this.estudiantes=new ArrayList<Estudiante>();
 	}
 	
-	public List<Estudiante> getEstudiantes() {
-		return estudiantes;
-	}
-	public void setEstudiantes(List<Estudiante> estudiantes) {
-		this.estudiantes = estudiantes;
-	}
+
 	public String getNombre() {
 		return nombre;
 	}

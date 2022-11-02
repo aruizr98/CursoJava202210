@@ -15,6 +15,8 @@ public class EjercicioMapInstituto {
 		this.datosColegio=new HashMap<Colegio, List<Estudiante>>();
 	}
 	public void crearColegios() {
+		Colegio c1=new Colegio("Colegio 1", "Madrid");
+		Colegio c2=new Colegio("Colegio 2", "Madrid");
 		
 		Estudiante e1=new Estudiante("Estudiante 1", "Apellidos 1");
 		Estudiante e2=new Estudiante("Estudiante 2", "Apellidos 2", "12345D");
@@ -30,11 +32,10 @@ public class EjercicioMapInstituto {
 		estudiantes2.add(e4);
 		estudiantes2.add(e5);
 		estudiantes2.add(e6);
-		Colegio c1=new Colegio("Colegio 1", "Madrid", estudiantes1);
-		Colegio c2=new Colegio("Colegio 2", "Madrid", estudiantes2);
+
 		
-		this.datosColegio.put(c1,c1.getEstudiantes());
-		this.datosColegio.put(c2,c2.getEstudiantes());
+		this.datosColegio.put(c1,estudiantes1);
+		this.datosColegio.put(c2, estudiantes2);
 		
 	}
 	public void pintarDatosAlumnos() {
