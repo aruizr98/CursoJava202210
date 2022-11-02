@@ -31,7 +31,7 @@ public class EjercicioMapInstituto {
 		estudiantes2.add(e5);
 		estudiantes2.add(e6);
 		Colegio c1=new Colegio("Colegio 1", "Madrid", estudiantes1);
-		Colegio c2=new Colegio("Colegio 2", "Madrid", estudiantes1);
+		Colegio c2=new Colegio("Colegio 2", "Madrid", estudiantes2);
 		
 		this.datosColegio.put(c1,c1.getEstudiantes());
 		this.datosColegio.put(c2,c2.getEstudiantes());
