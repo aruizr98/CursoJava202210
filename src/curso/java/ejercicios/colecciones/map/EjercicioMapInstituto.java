@@ -79,6 +79,10 @@ public class EjercicioMapInstituto {
 		ArchivoServicio a = new ArchivoServicio();
 		List<Estudiante> estudiantes = a.leerArchivoAlumnos("./recursos/alumnos.txt");
 		System.out.println("Había " + estudiantes.size() + " alumnos en el fichero.");
+		Map<Colegio, List<Estudiante>> mapa=new HashMap<Colegio, List<Estudiante>>();
+		mapa.put(new Colegio("Colegio"), estudiantes);
+		this.datosColegio = mapa;
+		
 	}
 
 	public void leerFicheroAlumnosCompleto() {
@@ -94,7 +98,7 @@ public class EjercicioMapInstituto {
 				max = this.datosColegio.get(colegio).size();
 				if (!colegioMasGrande.containsValue(max)) {
 					colegioMasGrande.put(colegio, max);
-				}else {
+				} else {
 					colegioMasGrande.clear();
 					colegioMasGrande.put(colegio, max);
 				}
@@ -103,7 +107,7 @@ public class EjercicioMapInstituto {
 				min = this.datosColegio.get(colegio).size();
 				if (!colegioMasPequenyo.containsValue(min)) {
 					colegioMasPequenyo.put(colegio, min);
-				}else {
+				} else {
 					colegioMasPequenyo.clear();
 					colegioMasPequenyo.put(colegio, min);
 				}
@@ -122,8 +126,8 @@ public class EjercicioMapInstituto {
 
 	public static void main(String[] args) {
 		EjercicioMapInstituto e = new EjercicioMapInstituto();
-		e.leerFicheroAlumnosCompleto();
-		// e.leerFicheroAlumnos();
+		// e.leerFicheroAlumnosCompleto();
+		e.leerFicheroAlumnos();
 
 //		e.crearColegios();
 		e.pintarDatosAlumnos();
