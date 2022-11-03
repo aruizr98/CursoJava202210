@@ -14,6 +14,13 @@ public class Colegio {
 		this.nombre = nombre;
 		this.direccion = direccion;
 	}
+	public Colegio(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+	public Colegio() {
+		super();
+	}
 	
 
 	public String getNombre() {
