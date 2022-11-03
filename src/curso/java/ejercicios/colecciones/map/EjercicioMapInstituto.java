@@ -9,7 +9,9 @@ import curso.java.ejercicios.colecciones.instituto.Estudiante;
 import curso.java.ejercicios.colecciones.map.servicios.ArchivoServicio;
 
 public class EjercicioMapInstituto {
-	Map<Colegio, List<Estudiante>> datosColegio;
+	private Map<Colegio, List<Estudiante>> datosColegio;
+	private static final String FICHERO1="./recursos/alumnos.txt";
+	private static final String FICHERO2="./recursos/alumnos-colegio.txt";
 
 	public EjercicioMapInstituto() {
 		this.datosColegio = new HashMap<Colegio, List<Estudiante>>();
@@ -77,7 +79,7 @@ public class EjercicioMapInstituto {
 
 	public void leerFicheroAlumnos() {
 		ArchivoServicio a = new ArchivoServicio();
-		List<Estudiante> estudiantes = a.leerArchivoAlumnos("./recursos/alumnos.txt");
+		List<Estudiante> estudiantes = a.leerArchivoAlumnos(FICHERO1);
 		System.out.println("Había " + estudiantes.size() + " alumnos en el fichero.");
 		Map<Colegio, List<Estudiante>> mapa=new HashMap<Colegio, List<Estudiante>>();
 		mapa.put(new Colegio("Colegio"), estudiantes);
@@ -91,7 +93,7 @@ public class EjercicioMapInstituto {
 		int max = 0;
 		int min = 0;
 		ArchivoServicio a = new ArchivoServicio();
-		this.datosColegio = a.leerArchivoAlumnosColegio("./recursos/alumnos-colegio.txt");
+		this.datosColegio = a.leerArchivoAlumnosColegio(FICHERO2);
 		for (Colegio colegio : this.datosColegio.keySet()) {
 			System.out.println(colegio.getNombre() + " tiene " + this.datosColegio.get(colegio).size() + " alumnos");
 			if (max < this.datosColegio.get(colegio).size()) {

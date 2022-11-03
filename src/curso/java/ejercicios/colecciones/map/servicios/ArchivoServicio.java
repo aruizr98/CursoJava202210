@@ -35,7 +35,7 @@ public class ArchivoServicio {
 				for (String nombreAsignatura : asignaturasFavoritas) {
 					asignaturas.add(new Asignatura(nombreAsignatura));
 				}
-				Estudiante aux = new Estudiante(trozos[0], trozos[1], asignaturas);
+				Estudiante aux = new Estudiante(trozos[0], trozos[1],trozos[2], asignaturas);
 				listaEstudiantes.add(aux);
 			}
 			System.out.println("Archivo " + archivo.getName() + " leído.");
